@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity Details</title>
+<link rel="stylesheet" href="../css/project1.css">
+</head>
+<body>
+
+<div class="container" style="padding:40px;">
+
+    <h1 id="title"></h1>
+
+    <img id="image" style="width: 100%; max-width: 500px; border-radius: 10px; margin: 20px 0;" />
+
+    <p id="desc" style="font-size: 20px; line-height: 1.7;"></p>
+
+    <a href="index.html" 
+    style="display:inline-block; margin-top:20px; font-size:20px; color:green; text-decoration:none;">
+        ⬅ Back
+    </a>
+
+</div>
+
+<script>
+// Get saved data
+document.getElementById("title").innerText = localStorage.getItem("activityTitle");
+document.getElementById("desc").innerText = localStorage.getItem("activityDesc");
+document.getElementById("image").src = localStorage.getItem("activityImg");
+</script>
+
+</body>
+</html>
